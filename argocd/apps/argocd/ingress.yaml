@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argocd
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+
+spec:
+  rules:
+  - host: argocd.greyroom.net
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name:  argocd-server
+            port:
+              number: 443
+  tls:
+  - secretName: argocd-certificates-greyroom-net-production # <=== Use the name defined in Certificate resource.

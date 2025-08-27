@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "velero-ui-passphrase",
+    "namespace": "velero-ui",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "velero-ui-passphrase",
+        "namespace": "velero-ui",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      "pass_phrase": "AgBnn1j8VCnKqDUXIG8KSCg/guVM33CKUpEJM2gSMA0GdbbT+1kFC7TfjTMrBzuC291OAPQsLTs5y+oYveLbsmwYzryxcw7jL/gQxN7/j8CbiDtZGVjJWOX69Uhw3e1WWYgTjiIvs3QjrzGINwQgdSNud8A8yebofWMb15AdFStW5297SR/mPioBOs+bsucVTJXTRiT6MNded5sgj8gycgm40LmJiOR7wrqPD1Zi942HX3nCL9nIM0sKJwi2xeknCMhYYADi6aUrZJt6xFId1XHbbYbfnw2PqIGfnYkQfc32HX4LtrUJ5EkZswAXJK47psFjJW4tVy9ZBmaMGj6VchEHyDLXmQG+Gaaji0/wTJkq4rOHxIjFLkPQeBShi78/YyN4n/gs6kYjeqbfzTPD/Fr9t9GyUKubxSTCjyBxODu0//3GELSxkhfHUIB9oogzIaXTGFv/cTN0hIdWPNB/d/HhOSKxbwLpBEIxes5PtHRi4FycTMe7PgG2VZ04FQGa3XiC8vY3IM36NypFkVZiWd3hUfbFDeN07j4ZEC2GejSOJ1I67zaOz2eux2FZymEMP6Mi7qwvjXggAY61wqQZPUgtUvFhkf7yEWf3ErRdnNZHwpDj5QL8zO9AKxgLtCiGalSywGAUczF63pXGjJupYvtdqqRnO59YXQAcGBQWLmgViRFAH2vFTpvGfErEnKLzcH8Mf46krIcfaN2GvaiyDia8Me3y7/F/2TZSHPyivCQPfmPAvYt9ND8P/eyOAiocFQRd"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik
+  namespace: traefik
+
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      name: websecure
+      targetPort: 443
+      port: 443
+  selector:
+    app: traefik

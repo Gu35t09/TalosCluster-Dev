@@ -1,0 +1,12 @@
+cert-manager:
+  crds:
+    enabled: true # This option decides if the CRDs should be installed as part of the Helm installation.
+  replicaCount: 1
+  extraArgs:
+    - --dns01-recursive-nameservers=1.1.1.1:53,9.9.9.9:53 # Use this nameserver for DNS01 certificate
+    - --dns01-recursive-nameservers-only
+  podDnsPolicy: "None"
+  podDnsConfig:
+    nameservers:
+      - 1.1.1.1
+      - 9.9.9.9

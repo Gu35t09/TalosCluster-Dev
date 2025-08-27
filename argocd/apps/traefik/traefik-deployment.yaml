@@ -1,0 +1,40 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: traefik-deployment
+  namespace: traefik
+  labels:
+    app: traefik
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traefik
+  template:
+    metadata:
+      labels:
+        app: traefik
+    spec:
+      serviceAccountName: traefik-account
+      containers:
+        - name: traefik
+          image: traefik:v3.5
+          args:
+            # - --api.insecure
+            - --providers.kubernetesingress
+            - --providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik
+            - --global.checknewversion=false
+            - --global.sendanonymoususage=false
+            - --log.level=DEBUG
+            - --serversTransport.insecureSkipVerify=true
+            - --entryPoints.web.address=:80
+            - --entryPoints.web.http.redirections.entryPoint.to=websecure
+            - --entryPoints.web.http.redirections.entryPoint.scheme=https
+            - --entryPoints.websecure.address=:443
+            - --entryPoints.websecure.http.tls
+          ports:
+            - name: websecure
+              containerPort: 443
+            #- name: dashboard
+            #  containerPort: 8080
