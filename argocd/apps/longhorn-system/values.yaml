@@ -489,7 +489,7 @@ longhorn:
     # ingressClassName can replace the kubernetes.io/ingress.class annotation used in earlier Kubernetes releases.
     #ingressClassName: traefik ## MODIFIED
     # -- Hostname of the Layer 7 load balancer.
-    host: longhorn.greyroom.net ## MODIFIED
+    host: longhorn.dev.greyroom.net ## MODIFIED
     # -- Setting that allows you to enable TLS on ingress records.
     tls: true ## MODIFIED
     # -- Setting that allows you to enable secure connections to the Longhorn UI service via port 443.

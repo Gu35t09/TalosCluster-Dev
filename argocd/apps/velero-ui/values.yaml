@@ -166,7 +166,7 @@ velero-ui:
 
     # The list of hostnames to be covered with this ingress record.
     hosts:
-      - host: velero-ui.greyroom.net
+      - host: velero-ui.dev.greyroom.net
         paths:
           - path: /
             pathType: Prefix
@@ -175,7 +175,7 @@ velero-ui:
     tls:
       - secretName: velero-ui-certificates-greyroom-net-production
         hosts:
-         - velero-ui.greyroom.net
+         - velero-ui.dev.greyroom.net
 
 
   # Configure resource requests and limits

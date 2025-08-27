@@ -8,7 +8,7 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
   - git:
-      repoURL: https://github.com/Gu35t09/TalosCluster.git
+      repoURL: https://github.com/Gu35t09/TalosCluster-Dev.git
       revision: HEAD
       directories:
       - path: argocd/apps/*
@@ -18,7 +18,7 @@ spec:
     spec:
       project: "default"
       source:
-        repoURL: https://github.com/Gu35t09/TalosCluster.git
+        repoURL: https://github.com/Gu35t09/TalosCluster-Dev.git
         targetRevision: HEAD
         path: '{{.path.path}}'
       destination:
