@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: alertmanager-certificates-greyroom-net-production
+  namespace: monitoring
+spec:
+  secretName: alertmanager-certificates-greyroom-net-production
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "alertmanager.dev.greyroom.net"
+  dnsNames:
+    - "alertmanager.dev.greyroom.net"

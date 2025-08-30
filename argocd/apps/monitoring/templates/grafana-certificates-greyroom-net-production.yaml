@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: grafana-certificates-greyroom-net-production
+  namespace: monitoring
+spec:
+  secretName: grafana-certificates-greyroom-net-production
+  issuerRef:
+    name: issuer-letsencrypt-production
+    kind: ClusterIssuer
+  commonName: "grafana.dev.greyroom.net"
+  dnsNames:
+    - "grafana.dev.greyroom.net"
